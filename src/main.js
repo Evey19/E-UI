@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
-import { Menu, MenuItem,Button } from 'element-ui'
+import { Menu, MenuItem, Button, Table,TableColumn } from 'element-ui'
 import router from './router/index'
 
 Vue.use(Menu)
 Vue.use(MenuItem)
 Vue.use(Button)
+Vue.use(Table)
+Vue.use(TableColumn)
 
 import './components/index'
 Vue.config.productionTip = false
