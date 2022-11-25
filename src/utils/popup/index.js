@@ -1,3 +1,4 @@
+import Vue from 'vue';
 import PopupManager from './popup-manager'
 
 let id = 1
@@ -14,7 +15,8 @@ export default {
     closeOnClickModal: {
       type: Boolean,
       default: false
-    }
+    },
+    zIndex: {}
   },
   beforeMount() {
     this._popupId = 'popup-' + id++;
@@ -26,14 +28,22 @@ export default {
   },
   data() {
     return {
-      opened: false
+      opened: false,
+      rendered: false
     }
   },
   watch: {
     visible(val) {
       if (val) {
         if (this._opening) return
-        this.open()
+        if (!this.rendered) {
+          this.rendered = true
+          Vue.nextTick(() => {
+            this.open()
+          })
+        } else {
+          this.open()
+        }
       } else {
         this.close()
       }
@@ -41,6 +51,9 @@ export default {
   },
   methods: {
     open() {
+      if (!this.rendered) {
+        this.rendered = true
+      }
       const props = this.$props
       this.doOpen(props)
     },

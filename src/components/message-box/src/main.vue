@@ -53,6 +53,7 @@
 </template>
 
 <script>
+import Popup from "@/utils/popup";
 let typeMap = {
   success: "success",
   info: "info",
@@ -60,6 +61,12 @@ let typeMap = {
   error: "error",
 };
 export default {
+  mixins: [Popup],
+  props: {
+    modal: {
+      default: true,
+    },
+  },
   data() {
     return {
       title: undefined,
@@ -86,16 +93,16 @@ export default {
   },
   methods: {
     handleAction(action) {
-      if (this.$type === "prompt" && action === "confirm") return;
       this.action = action;
       this.doClose();
     },
     doClose() {
       if (!this.visible) return;
       this.visible = false;
+      this.doAfterClose()
       setTimeout(() => {
         if (this.action) this.callback(this.action, this);
-      });
+      }, 200);
     },
   },
 };
