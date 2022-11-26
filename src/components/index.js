@@ -4,7 +4,8 @@ import MessageBox from './message-box'
 import Loading from './loading'
 import Notification from './notification'
 import EDialog from './dialog'
-const components = [EDialog]
+import EInput from './input'
+const components = [EDialog,EInput]
 
 const installComponents = function (Vue) {
   components.forEach(component => Vue.component(component.name, component))

@@ -19,6 +19,10 @@ const routeArr = [
     path: "/Dialog",
     component: resolve => require(['@/views/dialog.vue'], resolve),
   },
+  {
+    path: "/Input",
+    component: resolve => require(['@/views/input.vue'], resolve),
+  },
 ]
 
 export default routeArr
