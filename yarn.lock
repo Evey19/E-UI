@@ -2118,6 +2118,11 @@ camel-case@^4.1.2:
     pascal-case "^3.1.2"
     tslib "^2.0.3"
 
+camelcase@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.npmmirror.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
+  integrity sha512-FxAv7HpHrXbh3aPo4o2qxHay2lkLY3x5Mw3KeE4KQE8ysVfziWeRZDwcjauvwBSGEC/nXUPzZy8zeh4HokqOnw==
+
 camelcase@^5.0.0:
   version "5.3.1"
   resolved "https://registry.npmmirror.com/camelcase/-/camelcase-5.3.1.tgz"
@@ -3176,6 +3181,13 @@ file-entry-cache@^6.0.1:
   dependencies:
     flat-cache "^3.0.4"
 
+file-save@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.npmmirror.com/file-save/-/file-save-0.2.0.tgz#39b20d0214e656b1417faa3c32d317b678545db7"
+  integrity sha512-teMqpbPLBDAHEDAPYEb8fGfng4S6eGZcsN0CLM1ow0w1vtqTMBwNmd82dEc81O3C1BEs1EY8L18Ma6Q6O++v1A==
+  dependencies:
+    mkdirp "~0.5.0"
+
 fill-range@^7.0.1:
   version "7.0.1"
   resolved "https://registry.npmmirror.com/fill-range/-/fill-range-7.0.1.tgz"
@@ -4132,7 +4144,7 @@ minipass@^3.1.1:
   dependencies:
     yallist "^4.0.0"
 
-mkdirp@^0.5.6:
+mkdirp@^0.5.6, mkdirp@~0.5.0:
   version "0.5.6"
   resolved "https://registry.npmmirror.com/mkdirp/-/mkdirp-0.5.6.tgz"
   integrity sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==
@@ -5729,6 +5741,13 @@ update-browserslist-db@^1.0.9:
   dependencies:
     escalade "^3.1.1"
     picocolors "^1.0.0"
+
+uppercamelcase@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmmirror.com/uppercamelcase/-/uppercamelcase-3.0.0.tgz#380b321b8d73cba16fec4d752a575152d1ef7317"
+  integrity sha512-zTWmRiOJACCdFGWjzye3L5cjSuVdZ/c8C0iHIwVbfORFD8IhGNAO6BOWkZ+fj+SI6/aFbdjGXE6gwPG780H4gQ==
+  dependencies:
+    camelcase "^4.1.0"
 
 uri-js@^4.2.2:
   version "4.4.1"
