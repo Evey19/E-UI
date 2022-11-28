@@ -8,6 +8,7 @@
         'e-input--prefix': $slots.prefix || prefixIcon,
         'e-input--suffix':
           $slots.suffix || suffixIcon || clearable || showPassword,
+        'e-input-group': $slots.prepend || $slots.append,
         'e-input-group--prepend': $slots.prepend,
         'e-input-group--append': $slots.append,
         'is-exceed': inputExceed,
@@ -116,7 +117,7 @@ export default {
       type: String,
       default: "text",
     },
-    autoSize: {
+    autosize: {
       type: [Boolean, Object],
       default: false,
     },
@@ -200,8 +201,17 @@ export default {
     },
   },
   watch: {
+    value() {
+      this.$nextTick(this.resizeTextarea);
+    },
     nativeInputValue() {
       this.setNativeInputValue();
+    },
+    type() {
+      this.$nextTick(() => {
+        this.setNativeInputValue();
+        this.resizeTextarea();
+      });
     },
   },
   methods: {
@@ -222,16 +232,16 @@ export default {
       this.getInput().select();
     },
     resizeTextarea() {
-      const { autoSize, type } = this;
+      const { autosize, type } = this;
       if (type !== "textarea") return;
-      if (!autoSize) {
+      if (!autosize) {
         this.textareaCalcStyle = {
           minHeight: calcTextareaHeight(this.$refs.textarea).minHeight,
         };
         return;
       }
-      const minRows = autoSize.minRows;
-      const maxRows = autoSize.maxRows;
+      const minRows = autosize.minRows;
+      const maxRows = autosize.maxRows;
       this.textareaCalcStyle = calcTextareaHeight(
         this.$refs.textarea,
         minRows,
@@ -315,7 +325,7 @@ export default {
   transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.e-textarea__inner::placeholder {
+.el-textarea__inner::placeholder {
   color: #c0c4cc;
 }
 
@@ -390,6 +400,7 @@ export default {
 }
 
 .e-input__inner {
+  appearance: none;
   background-color: #fff;
   border-radius: 4px;
   border: 1px solid #dcdfe6;
@@ -583,5 +594,11 @@ export default {
 
 .e-input-group__append {
   border-left: 0;
+}
+
+.e-input__inner::clear {
+  display: none;
+  width: 0;
+  height: 0;
 }
 </style>

@@ -5,7 +5,10 @@ import Loading from './loading'
 import Notification from './notification'
 import EDialog from './dialog'
 import EInput from './input'
-const components = [EDialog,EInput]
+import EButton from './button'
+import EButtonGroup from './button-group'
+import EAlert from './alert'
+const components = [EDialog, EInput, EButton,EButtonGroup,EAlert]
 
 const installComponents = function (Vue) {
   components.forEach(component => Vue.component(component.name, component))

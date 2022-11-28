@@ -23,6 +23,14 @@ const routeArr = [
     path: "/Input",
     component: resolve => require(['@/views/input.vue'], resolve),
   },
+  {
+    path: "/Button",
+    component: resolve => require(['@/views/button.vue'], resolve),
+  },
+  {
+    path: "/Alert",
+    component: resolve => require(['@/views/alert.vue'], resolve),
+  },
 ]
 
 export default routeArr

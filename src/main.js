@@ -10,6 +10,7 @@ Vue.use(Table)
 Vue.use(TableColumn)
 
 import './components/index'
+import './common/common.scss'
 Vue.config.productionTip = false
 
 new Vue({
