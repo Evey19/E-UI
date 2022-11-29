@@ -8,7 +8,19 @@ import EInput from './input'
 import EButton from './button'
 import EButtonGroup from './button-group'
 import EAlert from './alert'
-const components = [EDialog, EInput, EButton,EButtonGroup,EAlert]
+import Radio from './radio'
+import RadioGroup from './radio-group'
+import RadioButton from './radio-button'
+const components = [
+  EDialog,
+  EInput,
+  EButton,
+  EButtonGroup,
+  EAlert,
+  Radio,
+  RadioGroup,
+  RadioButton
+]
 
 const installComponents = function (Vue) {
   components.forEach(component => Vue.component(component.name, component))

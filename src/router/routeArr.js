@@ -31,6 +31,10 @@ const routeArr = [
     path: "/Alert",
     component: resolve => require(['@/views/alert.vue'], resolve),
   },
+  {
+    path: "/Radio",
+    component: resolve => require(['@/views/radio.vue'], resolve),
+  },
 ]
 
 export default routeArr
