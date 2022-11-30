@@ -11,6 +11,8 @@ import EAlert from './alert'
 import Radio from './radio'
 import RadioGroup from './radio-group'
 import RadioButton from './radio-button'
+import Checkbox from './checkbox'
+import CheckboxGroup from './checkbox-group'
 const components = [
   EDialog,
   EInput,
@@ -19,7 +21,9 @@ const components = [
   EAlert,
   Radio,
   RadioGroup,
-  RadioButton
+  RadioButton,
+  Checkbox,
+  CheckboxGroup
 ]
 
 const installComponents = function (Vue) {

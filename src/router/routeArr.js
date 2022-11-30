@@ -35,6 +35,10 @@ const routeArr = [
     path: "/Radio",
     component: resolve => require(['@/views/radio.vue'], resolve),
   },
+  {
+    path: "/Checkbox",
+    component: resolve => require(['@/views/checkbox.vue'], resolve),
+  },
 ]
 
 export default routeArr
