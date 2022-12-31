@@ -13,6 +13,12 @@ import RadioGroup from './radio-group'
 import RadioButton from './radio-button'
 import Checkbox from './checkbox'
 import CheckboxGroup from './checkbox-group'
+import CheckboxButton from './checkbox-button'
+import ETag from './tag'
+import Badge from './badge'
+import Link from './link'
+import Backtop from './backtop'
+import Image from './image'
 const components = [
   EDialog,
   EInput,
@@ -23,7 +29,13 @@ const components = [
   RadioGroup,
   RadioButton,
   Checkbox,
-  CheckboxGroup
+  CheckboxGroup,
+  CheckboxButton,
+  ETag,
+  Badge,
+  Link,
+  Backtop,
+  Image
 ]
 
 const installComponents = function (Vue) {

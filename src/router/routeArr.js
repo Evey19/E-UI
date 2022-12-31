@@ -39,6 +39,22 @@ const routeArr = [
     path: "/Checkbox",
     component: resolve => require(['@/views/checkbox.vue'], resolve),
   },
+  {
+    path: "/Tag",
+    component: resolve => require(['@/views/tag.vue'], resolve),
+  },
+  {
+    path: "/Badge",
+    component: resolve => require(['@/views/badge.vue'], resolve),
+  },
+  {
+    path: "/Link",
+    component: resolve => require(['@/views/link.vue'], resolve),
+  },
+  {
+    path: "/Image",
+    component: resolve => require(['@/views/image.vue'], resolve),
+  },
 ]
 
 export default routeArr

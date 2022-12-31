@@ -23,27 +23,30 @@
     <div class="demo-block">
       <e-checkbox-group v-model="checkedCities" :min="2" :max="3">
         <e-checkbox v-for="city in cities" :label="city" :key="city">{{
-          city
+            city
         }}</e-checkbox>
       </e-checkbox-group>
     </div>
     <h3>indeterminate 状态</h3>
     <div class="demo-block">
-      <e-checkbox
-        :indeterminate="isIndeterminate"
-        v-model="checkAll"
-        @change="handleCheckAllChange"
-        >全选</e-checkbox
-      >
+      <e-checkbox :indeterminate="isIndeterminate" v-model="checkAll" @change="handleCheckAllChange">全选</e-checkbox>
       <div style="margin: 15px 0"></div>
-      <e-checkbox-group
-        v-model="checkedCities"
-        @change="handleCheckedCitiesChange"
-      >
+      <e-checkbox-group v-model="checkedCities" @change="handleCheckedCitiesChange">
         <e-checkbox v-for="city in cities" :label="city" :key="city">{{
-          city
+            city
         }}</e-checkbox>
       </e-checkbox-group>
+    </div>
+    <h3>按钮样式</h3>
+    <div class="demo-block">
+      <e-checkbox-group v-model="checkboxGroup1">
+        <e-checkbox-button v-for="city in cities" :label="city" :key="city">{{ city }}</e-checkbox-button>
+      </e-checkbox-group>
+    </div>
+    <h3>带有边框</h3>
+    <div class="demo-block">
+      <e-checkbox v-model="checked1" label="备选项1" border></e-checkbox>
+      <e-checkbox v-model="checked2" label="备选项2" border></e-checkbox>
     </div>
   </div>
 </template>
@@ -61,6 +64,7 @@ export default {
       isIndeterminate: true,
       checked1: false,
       checked2: true,
+      checkboxGroup1: ['深圳'],
     };
   },
   methods: {

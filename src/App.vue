@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="page-component__scroll">
     <div class="left">
       <el-menu
         :default-active="$route.path"

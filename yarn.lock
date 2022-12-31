@@ -5629,6 +5629,11 @@ thread-loader@^3.0.0:
     neo-async "^2.6.2"
     schema-utils "^3.0.0"
 
+throttle-debounce@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmmirror.com/throttle-debounce/-/throttle-debounce-1.0.1.tgz#dad0fe130f9daf3719fdea33dc36a8e6ba7f30b5"
+  integrity sha512-UY6k0BunhpXVx0Emi5PvBQYw8mFoqJtI2B3Cey3xvUD4+A+OhTCo28JoJwXjDXKDX1brQqQn+07f+6SjPJhoTg==
+
 throttle-debounce@^1.0.1:
   version "1.1.0"
   resolved "https://registry.npmmirror.com/throttle-debounce/-/throttle-debounce-1.1.0.tgz"

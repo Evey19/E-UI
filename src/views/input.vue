@@ -80,17 +80,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.page-component__content {
-  width: 868px;
-  padding-bottom: 100px;
-  box-sizing: border-box;
-}
-.demo-block {
-  border: 1px solid #ebebeb;
-  border-radius: 3px;
-  margin-bottom: 24px;
-  padding: 24px;
-}
-</style>
