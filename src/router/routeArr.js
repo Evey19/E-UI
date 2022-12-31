@@ -55,6 +55,10 @@ const routeArr = [
     path: "/Image",
     component: resolve => require(['@/views/image.vue'], resolve),
   },
+  {
+    path: "/Rate",
+    component: resolve => require(['@/views/rate.vue'], resolve),
+  },
 ]
 
 export default routeArr

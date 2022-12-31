@@ -19,6 +19,7 @@ import Badge from './badge'
 import Link from './link'
 import Backtop from './backtop'
 import Image from './image'
+import Rate from './rate'
 const components = [
   EDialog,
   EInput,
@@ -35,7 +36,8 @@ const components = [
   Badge,
   Link,
   Backtop,
-  Image
+  Image,
+  Rate
 ]
 
 const installComponents = function (Vue) {
