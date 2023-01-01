@@ -20,6 +20,8 @@ import Link from './link'
 import Backtop from './backtop'
 import Image from './image'
 import Rate from './rate'
+import Step from './step'
+import Steps from './steps'
 const components = [
   EDialog,
   EInput,
@@ -37,7 +39,9 @@ const components = [
   Link,
   Backtop,
   Image,
-  Rate
+  Rate,
+  Step,
+  Steps
 ]
 
 const installComponents = function (Vue) {
